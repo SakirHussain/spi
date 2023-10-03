@@ -31,7 +31,7 @@ always @(posedge wb_clk or posedge wb_reset) begin
         sclk <= 0;
         cpol_0 <= 0;
         cpol_1 <= 0;
-        count <= 0;
+        count <= 32'h0000;
     end
     else begin
             count <= count + 32'h0001;
