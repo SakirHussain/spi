@@ -1,0 +1,8 @@
+{D:/college/Maven Silicon/SPI/tb/spi_clgen_tb.v} {1 {vlog -work work -stats=none {D:\college\Maven Silicon\SPI\tb\spi_clgen_tb.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module spi_clgen_tb
+
+Top level modules:
+	spi_clgen_tb
+
+} {} {}}
