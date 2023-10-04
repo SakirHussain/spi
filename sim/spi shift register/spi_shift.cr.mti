@@ -1,0 +1,15 @@
+{D:/college/Maven Silicon/SPI/sim/spi shift register/spi_shift.v} {1 {vlog -work work -stats=none {D:/college/Maven Silicon/SPI/sim/spi shift register/spi_shift.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module spi_shift
+
+Top level modules:
+	spi_shift
+
+} {} {}} {D:/college/Maven Silicon/SPI/sim/spi shift register/spi_shift_tb.v} {1 {vlog -work work -stats=none {D:/college/Maven Silicon/SPI/sim/spi shift register/spi_shift_tb.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_spi_shift
+
+Top level modules:
+	tb_spi_shift
+
+} {} {}}

@@ -30,3 +30,6 @@ run -all
 #    Time: 1010 ps  Iteration: 0  Instance: /spi_clgen_tb
 # 1
 # Break in Module spi_clgen_tb at D:/college/Maven Silicon/SPI/tb/spi_clgen_tb.v line 55
+quit -sim
+# End time: 16:46:42 on Oct 04,2023, Elapsed time: 1:20:28
+# Errors: 0, Warnings: 1
