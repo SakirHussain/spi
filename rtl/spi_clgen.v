@@ -1,3 +1,5 @@
+`include "spi_defines.v"
+
 module spi_clgen(
                     wb_clk,
                     wb_reset,
@@ -10,11 +12,11 @@ module spi_clgen(
                     cpol_1 );
 
     input wb_clk, wb_reset, tip, go, lstclk;
-    input [31:0] divider;
+    input [`SPI_DIVIDER_LEN - 1 :0] divider;
 
     output reg sclk, cpol_0, cpol_1;
 
-    reg [31:0] count ;
+    reg [`SPI_DIVIDER_LEN - 1 :0] count ;
 
     // always @(wb_reset:sensitivity_list) begin
     //     if (wb_reset == 1'b1) begin
@@ -27,11 +29,11 @@ module spi_clgen(
 
     always @(posedge wb_clk or posedge wb_reset) begin
         if (wb_reset == 1'b1) begin
-            count <= 32'h0000;
+            count <= {{`SPI_DIVIDER_LEN{1`b0}},1`b1};
         end
         else if (tip) begin
             if (count == divider + 32'h0001) begin
-                count <= 32'h0000;
+                count <= {{`SPI_DIVIDER_LEN{1`b0}},1`b1};
             end
             else begin
                 count <= count + 1;
