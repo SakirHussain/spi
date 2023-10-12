@@ -1,28 +1,19 @@
-# Compile of spi_clgen.v was successful.
+# Compile of spi_clgen.v failed with 4 errors.
+# Compile of spi_clgen_tb.v was successful.
+# 2 compiles, 1 failed with 4 errors.
+# Compile of spi_clgen.v was successful with warnings.
+# Compile of spi_clgen_tb.v was successful.
+# 2 compiles, 0 failed with no errors.
+# Compile of spi_clgen.v was successful with warnings.
 # Compile of spi_clgen_tb.v was successful.
 # 2 compiles, 0 failed with no errors.
 vsim -gui work.spi_clgen_tb
 # vsim -gui work.spi_clgen_tb 
-# Start time: 15:24:00 on Oct 04,2023
+# Start time: 15:46:50 on Oct 12,2023
 # Loading work.spi_clgen_tb
 # Loading work.spi_clgen
-add wave sim:/spi_clgen_tb/*
-run -all
-# sclk = x, cpol_0 = x, cpol_1 = x
-# ** Note: $finish    : D:/college/Maven Silicon/SPI/tb/spi_clgen_tb.v(55)
-#    Time: 1020 ps  Iteration: 0  Instance: /spi_clgen_tb
-# 1
-# Break in Module spi_clgen_tb at D:/college/Maven Silicon/SPI/tb/spi_clgen_tb.v line 55
-# Compile of spi_clgen.v was successful.
-# Compile of spi_clgen_tb.v was successful.
-# 2 compiles, 0 failed with no errors.
-vsim -gui work.spi_clgen_tb
-# End time: 15:26:14 on Oct 04,2023, Elapsed time: 0:02:14
-# Errors: 0, Warnings: 3
-# vsim -gui work.spi_clgen_tb 
-# Start time: 15:26:14 on Oct 04,2023
-# Loading work.spi_clgen_tb
-# Loading work.spi_clgen
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'divider'. The port definition is at: D:/college/Maven Silicon/SPI/rtl/spi_clgen.v(9).
+#    Time: 0 ps  Iteration: 0  Instance: /spi_clgen_tb/uut File: D:/college/Maven Silicon/SPI/tb/spi_clgen_tb.v Line: 17
 add wave sim:/spi_clgen_tb/*
 run -all
 # sclk = x, cpol_0 = x, cpol_1 = x
@@ -30,6 +21,21 @@ run -all
 #    Time: 1010 ps  Iteration: 0  Instance: /spi_clgen_tb
 # 1
 # Break in Module spi_clgen_tb at D:/college/Maven Silicon/SPI/tb/spi_clgen_tb.v line 55
-quit -sim
-# End time: 16:46:42 on Oct 04,2023, Elapsed time: 1:20:28
-# Errors: 0, Warnings: 1
+vsim -gui work.spi_clgen_tb
+# End time: 15:47:23 on Oct 12,2023, Elapsed time: 0:00:33
+# Errors: 0, Warnings: 5
+# vsim -gui work.spi_clgen_tb 
+# Start time: 15:47:23 on Oct 12,2023
+# Loading work.spi_clgen_tb
+# Loading work.spi_clgen
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'divider'. The port definition is at: D:/college/Maven Silicon/SPI/rtl/spi_clgen.v(9).
+#    Time: 0 ps  Iteration: 0  Instance: /spi_clgen_tb/uut File: D:/college/Maven Silicon/SPI/tb/spi_clgen_tb.v Line: 17
+add wave sim:/spi_clgen_tb/*
+run -all
+# sclk = x, cpol_0 = x, cpol_1 = x
+# ** Note: $finish    : D:/college/Maven Silicon/SPI/tb/spi_clgen_tb.v(55)
+#    Time: 1010 ps  Iteration: 0  Instance: /spi_clgen_tb
+# 1
+# Break in Module spi_clgen_tb at D:/college/Maven Silicon/SPI/tb/spi_clgen_tb.v line 55
+# End time: 15:48:22 on Oct 12,2023, Elapsed time: 0:00:59
+# Errors: 0, Warnings: 2

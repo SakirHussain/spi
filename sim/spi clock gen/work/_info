@@ -10,24 +10,24 @@ z2
 cModel Technology
 dD:/college/Maven Silicon/Alarm Pilot Project/Project_templates/sim/alarm_clock_top
 vspi_clgen
-Z0 !s110 1696413367
+Z0 !s110 1697105794
 !i10b 1
-!s100 :3FEldb5N7OaNGZR>US_82
+!s100 4<cR42Y@mKQEeW`5QcEf32
 Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I:HeKhXkCH]31P>l^Le3430
+I]=EgoA[G_50IkRE<N5fo<0
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 Z3 dD:/college/Maven Silicon/SPI/sim/spi clock gen
-w1696413181
+w1697105780
 8D:/college/Maven Silicon/SPI/rtl/spi_clgen.v
 FD:/college/Maven Silicon/SPI/rtl/spi_clgen.v
-!i122 44
-L0 1 83
+!i122 49
+L0 3 83
 Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1696413367.000000
-!s107 D:/college/Maven Silicon/SPI/rtl/spi_clgen.v|
+Z5 !s108 1697105794.000000
+!s107 D:\college\Maven Silicon\SPI\rtl\spi_defines.v|D:/college/Maven Silicon/SPI/rtl/spi_clgen.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/college/Maven Silicon/SPI/rtl/spi_clgen.v|
 !i113 1
 Z6 o-work work
@@ -43,7 +43,7 @@ R3
 w1696413361
 Z8 8D:/college/Maven Silicon/SPI/tb/spi_clgen_tb.v
 Z9 FD:/college/Maven Silicon/SPI/tb/spi_clgen_tb.v
-!i122 45
+!i122 50
 L0 1 62
 R4
 r1

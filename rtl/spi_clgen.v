@@ -29,11 +29,11 @@ module spi_clgen(
 
     always @(posedge wb_clk or posedge wb_reset) begin
         if (wb_reset == 1'b1) begin
-            count <= {{`SPI_DIVIDER_LEN{1`b0}},1`b1};
+            count <= {{`SPI_DIVIDER_LEN{1'b0}},1'b1};
         end
         else if (tip) begin
             if (count == divider + 32'h0001) begin
-                count <= {{`SPI_DIVIDER_LEN{1`b0}},1`b1};
+                count <= {{`SPI_DIVIDER_LEN{1'b0}},1'b1};
             end
             else begin
                 count <= count + 1;
