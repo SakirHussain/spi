@@ -68,15 +68,15 @@ module spi_shift(
     assign tx_clk = ((tx_negedge) ? cpol_1 : cpol_0) && !last;
     assign rx_clk = ((rx_negedge) ? cpol_1 : cpol_0) && (!last || sclk);
 
-    assign tx_bit_pos = lsb ? {!(|len), len} - char_count : char_count - {{`SPI_CHAR_LEN_BITS{1`b0}}, 1'b1} ;
-    assign rx_bit_pos = lsb ? {!(|len), len} - (rx_negedge ? char_count + {{`SPI_CHAR_LEN_BITS{1'b0}},1`b1} : char_count) :
-                        (rx_negedge ? char_count : char_count - {{`SPI_CHAR_LEN_BITS{1`b0}},1`b1});
+    assign tx_bit_pos = lsb ? {!(|len), len} - char_count : char_count - {{`SPI_CHAR_LEN_BITS{1'b0}}, 1'b1} ;
+    assign rx_bit_pos = lsb ? {!(|len), len} - (rx_negedge ? char_count + {{`SPI_CHAR_LEN_BITS{1'b0}},1'b1} : char_count) :
+                        (rx_negedge ? char_count : char_count - {{`SPI_CHAR_LEN_BITS{1'b0}},1'b1});
     
     assign p_out = master_data;
 
     always @(posedge wb_clk or posedge wb_reset) begin
         if (wb_reset) begin
-            master_data <= {SPI_MAX_CHAR{1`b0}};
+            master_data <= {`SPI_MAX_CHAR{1'b0}};
         end
 
         `ifdef SPI_MAX_CHAR_128
