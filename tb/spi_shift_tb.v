@@ -1,4 +1,4 @@
-`timescale 1ns/1ps
+`include "D:\\college\\Maven Silicon\\SPI\\rtl\\spi_defines.v"
 
 module tb_spi_shift;
     reg wb_clk;
@@ -7,18 +7,21 @@ module tb_spi_shift;
     reg tx_negedge;
     reg [3:0] byte_sel;
     reg [3:0] latch;
-    reg [2:0] len;
-    reg [7:0] p_in;
+    reg [`SPI_CHAR_LEN_BITS - 1 :0] len;
+    reg [`SPI_MAX_CHAR - 1 :0] p_in;
     reg go;
     reg miso;
     reg lsb;
     reg sclk;
     reg cpol_0;
     reg cpol_1;
-    reg [7:0] p_out;
-    reg last;
-    reg mosi;
-    reg tip;
+    wire [`SPI_MAX_CHAR - 1 : 0] p_out;
+    wire last;
+    wire mosi;
+    wire tip;
+
+    parameter T  = 10;
+    parameter [`SPI_DIVIDER_LEN - 1 : 0] divider_value = 4'b0010;
 
     // Instantiate the SPI module
     spi_shift u_spi_shift (
@@ -43,49 +46,132 @@ module tb_spi_shift;
     );
 
     // Clock generation for wb_clk (5ms interval)
-    always begin
-        #5 wb_clk = ~wb_clk; 
-    end
-
-    // Clock generation for sclk (toggle every 3 cycles of wb_clk)
-    reg [1:0] sclk_counter;
-    always @(posedge wb_clk) begin
-        sclk_counter <= sclk_counter + 1;
-        if (sclk_counter == 3'b11) begin
-            sclk <= ~sclk;
-            sclk_counter <= 3'b00;
+    initial begin
+        wb_clk = 1'b0;
+        forever begin
+            #(T/2) wb_clk = ~wb_clk;
         end
     end
 
-    // Initialize signals with specified values
-    initial begin
-        wb_clk = 0;
-        wb_reset = 0;
-        rx_negedge = 1;
-        tx_negedge = 0;
-        len = 4'b0100; // Binary value 4
-        lsb = 1;
-        p_in = 8'b10101101;
-        byte_sel = 4'b0000;
-        latch = 4'b0000;
-        cpol_0 = 0;
-        cpol_1 = 0;
-        go = 0;
 
-        // Reset and release reset after a short delay
-        wb_reset = 1;
+    initial begin
+        sclk = 1'b0;
+        forever begin
+            repeat(divider_value + 1)
+            @(posedge wb_clk);
+            sclk = ~sclk;
+        end
+    end
+   
+   task rst();
+    begin
+        wb_reset = 1'b1;
         #10;
-        wb_reset = 0;
+        wb_reset = 1'b0;
+    end
+   endtask
+
+
+    initial begin
+        cpol_1 = 1'b0;
+        forever begin
+            repeat(divider_value*2 + 1)
+                @(posedge wb_clk);
+            
+            cpol_1 = 1'b1;
+
+            @(posedge wb_clk)
+            cpol_1  = 1'b0;
+
+            repeat(divider_value *2 + 1)
+                @(posedge wb_clk);
+
+            cpol_1 = 1'b1;
+
+            @(posedge wb_clk)
+            cpol_1 = 1'b0;
+        end
     end
 
-    // Stimulus generation
     initial begin
-        // Apply the go signal to initiate data transmission
-        go = 1;
-        // Simulate for a period of time
-        #100;
-        // End simulation
-        $finish;
+        cpol_0 = 1'b0;
+            repeat(divider_value)
+                @(posedge wb_clk);
+            
+            cpol_0 = 1'b1;
+
+            @(posedge wb_clk)
+            cpol_0  = 1'b0;
+            forever begin
+                repeat(divider_value *2 + 1)
+                @(posedge wb_clk)
+
+                cpol_0 = 1'b1;
+
+                @(posedge wb_clk)            
+                cpol_0 = 1'b0;
+            end           
+    end
+
+    task t1();
+        begin
+            @(negedge wb_clk)
+            rx_negedge = 1'b1;
+            tx_negedge = 1'b0;
+        end
+    endtask
+
+    task t2();
+        begin
+            @(negedge wb_clk)
+            rx_negedge = 1'b0;
+            tx_negedge = 1'b1;
+        end
+    endtask
+
+    task initialize();
+        begin
+            len = 3'b000;
+            lsb = 1'b0;
+            p_in = 32'h0000;
+            byte_sel = 4'b0000;
+            latch = 4'b0000;
+            go = 1'b0;
+            miso = 1'b0;
+            cpol_1 = 1'b0;
+            cpol_0 = 1'b0;
+        end
+    endtask
+
+
+    // Initialize signals with specified values
+    initial begin
+        initialize;
+        rst;
+        @(negedge wb_clk)
+        len = 32'h0004;
+        lsb = 1'b1;
+        p_in =32'haa55;
+        latch = 4'b0001;
+        byte_sel = 4'b00001;
+        t1;
+
+        #10;
+        go = 1'b1;
+        #40;
+        miso = 1'b1;
+        #20;
+        miso = 1'b0;
+        #20;
+        miso = 1'b1;
+        #20;
+        miso = 1'b0;
+        #20;
+        miso = 1'b1;
+        #20;
+        miso = 1'b0;
+        #30;
+        #1000 $finish;
     end
 
 endmodule

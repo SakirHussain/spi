@@ -1,31 +1,41 @@
-# Compile of spi_shift.v failed with 6 errors.
-# Compile of spi_shift_tb.v failed with 12 errors.
-# 2 compiles, 2 failed with 18 errors.
-# Compile of spi_shift.v failed with 1 errors.
-# Compile of spi_shift_tb.v failed with 12 errors.
-# 2 compiles, 2 failed with 13 errors.
 # Compile of spi_shift.v was successful with warnings.
-# Compile of spi_shift_tb.v failed with 12 errors.
-# 2 compiles, 1 failed with 12 errors.
+# Compile of spi_shift_tb.v failed with 5 errors.
+# 2 compiles, 1 failed with 5 errors.
 # Compile of spi_shift.v was successful with warnings.
-# Compile of spi_shift_tb.v failed with 12 errors.
-# 2 compiles, 1 failed with 12 errors.
+# Compile of spi_shift_tb.v failed with 6 errors.
+# 2 compiles, 1 failed with 6 errors.
 # Compile of spi_shift.v was successful with warnings.
-# Compile of spi_shift_tb.v was successful.
+# Compile of spi_shift_tb.v failed with 1 errors.
+# 2 compiles, 1 failed with 1 error.
+# Compile of spi_shift.v was successful with warnings.
+# Compile of spi_shift_tb.v was successful with warnings.
 # 2 compiles, 0 failed with no errors.
 vsim -gui work.tb_spi_shift
 # vsim -gui work.tb_spi_shift 
-# Start time: 17:25:20 on Oct 12,2023
+# Start time: 17:37:07 on Oct 21,2023
 # Loading work.tb_spi_shift
 # Loading work.spi_shift
-# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'p_out'.
-#    Time: 0 ps  Iteration: 0  Instance: /tb_spi_shift/u_spi_shift File: D:/college/Maven Silicon/SPI/tb/spi_shift_tb.v Line: 24
-# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'last'.
-#    Time: 0 ps  Iteration: 0  Instance: /tb_spi_shift/u_spi_shift File: D:/college/Maven Silicon/SPI/tb/spi_shift_tb.v Line: 24
-# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'mosi'.
-#    Time: 0 ps  Iteration: 0  Instance: /tb_spi_shift/u_spi_shift File: D:/college/Maven Silicon/SPI/tb/spi_shift_tb.v Line: 24
-# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'tip'.
-#    Time: 0 ps  Iteration: 0  Instance: /tb_spi_shift/u_spi_shift File: D:/college/Maven Silicon/SPI/tb/spi_shift_tb.v Line: 24
-# Error loading design
-# End time: 17:25:20 on Oct 12,2023, Elapsed time: 0:00:00
-# Errors: 4, Warnings: 10
+add wave sim:/tb_spi_shift/*
+run -all
+# ** Note: $finish    : D:/college/Maven Silicon/SPI/tb/spi_shift_tb.v(173)
+#    Time: 1240 ps  Iteration: 0  Instance: /tb_spi_shift
+# 1
+# Break in Module tb_spi_shift at D:/college/Maven Silicon/SPI/tb/spi_shift_tb.v line 173
+# Compile of spi_shift.v was successful with warnings.
+# Compile of spi_shift_tb.v was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.tb_spi_shift
+# End time: 17:42:34 on Oct 21,2023, Elapsed time: 0:05:27
+# Errors: 0, Warnings: 6
+# vsim -gui work.tb_spi_shift 
+# Start time: 17:42:34 on Oct 21,2023
+# Loading work.tb_spi_shift
+# Loading work.spi_shift
+add wave -r /*
+run -all
+# ** Note: $finish    : D:/college/Maven Silicon/SPI/tb/spi_shift_tb.v(174)
+#    Time: 1240 ps  Iteration: 0  Instance: /tb_spi_shift
+# 1
+# Break in Module tb_spi_shift at D:/college/Maven Silicon/SPI/tb/spi_shift_tb.v line 174
+# End time: 22:20:21 on Oct 21,2023, Elapsed time: 4:37:47
+# Errors: 0, Warnings: 1

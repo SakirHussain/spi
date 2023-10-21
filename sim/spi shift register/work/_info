@@ -10,48 +10,48 @@ z2
 cModel Technology
 dC:/intelFPGA/20.1
 vspi_shift
-!s110 1697111713
+Z0 !s110 1697890345
 !i10b 1
 !s100 ]nBjSL8[8z[bV`gOg`aRa0
-Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
 IbHYaJ:]Nl?gVlcb783CkQ1
-Z1 VDg1SIo80bB@j0V0VzS_@n1
-Z2 dD:/college/Maven Silicon/SPI/sim/spi shift register
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dD:/college/Maven Silicon/SPI/sim/spi shift register
 w1697110883
 8D:/college/Maven Silicon/SPI/rtl/spi_shift.v
 FD:/college/Maven Silicon/SPI/rtl/spi_shift.v
-!i122 2
+!i122 9
 L0 3 224
-Z3 OV;L;2020.1;71
+Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z4 !s108 1697111713.000000
+Z5 !s108 1697890345.000000
 !s107 D:\college\Maven Silicon\SPI\rtl\spi_defines.v|D:/college/Maven Silicon/SPI/rtl/spi_shift.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/college/Maven Silicon/SPI/rtl/spi_shift.v|
 !i113 1
-Z5 o-work work
-Z6 tCvgOpt 0
+Z6 o-work work
+Z7 tCvgOpt 0
 vtb_spi_shift
-!s110 1697111714
-!i10b 1
-!s100 M[LVJP7nhICGY?64337k43
 R0
-I:Ycdi=nnj[SKg?UzDD3oa0
+!i10b 1
+!s100 13VhigP^Lb2YYMTzOiJGQ1
 R1
+IQ>cVYi>?8BmD>3RzY]:]i0
 R2
-w1697111709
+R3
+w1697890321
 8D:/college/Maven Silicon/SPI/tb/spi_shift_tb.v
 FD:/college/Maven Silicon/SPI/tb/spi_shift_tb.v
-!i122 3
-L0 3 89
-R3
+!i122 10
+L0 3 175
+R4
 r1
 !s85 0
 31
-R4
-!s107 D:/college/Maven Silicon/SPI/tb/spi_shift_tb.v|
+R5
+!s107 D:\college\Maven Silicon\SPI\rtl\spi_defines.v|D:/college/Maven Silicon/SPI/tb/spi_shift_tb.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/college/Maven Silicon/SPI/tb/spi_shift_tb.v|
 !i113 1
-R5
 R6
+R7
