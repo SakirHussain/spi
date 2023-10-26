@@ -85,7 +85,7 @@
 `define SPI_TX_3        5'b01100
 `define SPI_CTRL        5'b10000
 `define SPI_DIVIDE      5'b10100
-`define SPI_RX_0        5'b11000
+`define SPI_SS          5'b11000
 
 //control register
 

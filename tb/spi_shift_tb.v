@@ -66,7 +66,7 @@ module tb_spi_shift;
    task rst();
     begin
         wb_reset = 1'b1;
-        #10;
+        #15;
         wb_reset = 1'b0;
     end
    endtask
@@ -104,7 +104,7 @@ module tb_spi_shift;
             cpol_0  = 1'b0;
             forever begin
                 repeat(divider_value *2 + 1)
-                @(posedge wb_clk)
+                    @(posedge wb_clk);
 
                 cpol_0 = 1'b1;
 

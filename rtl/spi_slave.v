@@ -3,8 +3,7 @@
 module spi_slave(
     input sclk, mosi,
     input [`SPI_SS_NB - 1 : 0] ss_pad_o,
-    output miso 
-);
+    output miso );
     
     reg rx_slave = 1'b0;
     reg tx_slave = 1'b0;

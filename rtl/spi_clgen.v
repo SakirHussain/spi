@@ -3,8 +3,8 @@
 module spi_clgen(
                     wb_clk,
                     wb_reset,
-                    tip,
                     go,
+                    tip,
                     lstclk,
                     divider,
                     sclk,
@@ -28,7 +28,7 @@ module spi_clgen(
 
 
     always @(posedge wb_clk or posedge wb_reset) begin
-        if (wb_reset == 1'b1) begin
+        if (wb_reset) begin
             count <= {{`SPI_DIVIDER_LEN{1'b0}},1'b1};
         end
         else if (tip) begin
@@ -38,10 +38,10 @@ module spi_clgen(
             else begin
                 count <= count + 1;
             end
-        // else if (count) begin
-        //     count <= 32'h0004
-        // end        
         end
+        else if (count == 0) begin
+            count <= {{`SPI_DIVIDER_LEN{1'b0}}, 1'b1};
+        end        
     end
 
     always @(posedge wb_clk or posedge wb_reset) begin
@@ -51,7 +51,7 @@ module spi_clgen(
         else if (tip) begin
             if(count == (divider + 32'h0001)) begin
                 if(!lstclk || sclk) begin
-                    sclk = ~sclk;
+                    sclk <= ~sclk;
                 end
             end
         end

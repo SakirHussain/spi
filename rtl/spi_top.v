@@ -51,10 +51,10 @@ module spi_top(
                   cpol_0,
                   cpol_1);
 
-    spi_shift_reg SR (rx_negedge,
+    spi_shift SR (rx_negedge,
                       tx_negedge,
                       wb_sel_in,
-                      (spi_tx_sel[3:0] & {4{wb_we_in}})
+                      (spi_tx_sel[3:0] & {4{wb_we_in}}),
                       char_len,
                       wb_dat_in,
                       wb_clk_in,
@@ -111,7 +111,7 @@ module spi_top(
             wb_dat_o <= 32'd0;
         end
         else begin
-                wb_dat_in <= wb_temp_dat;
+                wb_dat_o <= wb_temp_dat;
         end
     end
 

@@ -52,6 +52,20 @@ module spi_shift(
         end
     end
 
+    always @(posedge wb_clk or posedge wb_reset) begin
+        if (wb_reset) begin
+            tip <= 0;
+        end
+        else begin
+            if (go && ~tip) begin
+                tip <= 1;
+            end
+            else if (last && tip && cpol_0) begin
+                tip <= 0;
+            end
+        end
+    end
+
     assign last = ~(|char_count);
 
     always @(posedge wb_clk or posedge wb_reset) begin

@@ -1,10 +1,10 @@
 module wishbone_master(
-    input clk_in, rst_in, aclk_in, err_in,
+    input clk_in, rst_in, ack_in, err_in,
     input [31:0] dat_in,
     output reg [4:0] adr_o,
     output reg cyc_o, stb_o, we_o,
     output reg [31:0] dat_o,
-    output ref [3:0] sel_o);
+    output reg [3:0] sel_o);
     
     integer adr_temp, sel_temp, dat_temp;
     reg we_temp, cyc_temp, stb_temp;
@@ -15,7 +15,7 @@ module wishbone_master(
         end
     endtask
 
-    task single_write();
+    task single_write;
         input [4:0] adr;
         input [31:0] dat;
         input [3:0] sel;
