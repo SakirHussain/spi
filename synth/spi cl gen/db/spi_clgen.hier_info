@@ -1,0 +1,37 @@
+|spi_clgen
+wb_clk => cpol_1~reg0.CLK
+wb_clk => cpol_0~reg0.CLK
+wb_clk => sclk~reg0.CLK
+wb_clk => count[0].CLK
+wb_clk => count[1].CLK
+wb_clk => count[2].CLK
+wb_clk => count[3].CLK
+wb_reset => cpol_1~reg0.ACLR
+wb_reset => cpol_0~reg0.ACLR
+wb_reset => sclk~reg0.ACLR
+wb_reset => count[0].PRESET
+wb_reset => count[1].ACLR
+wb_reset => count[2].ACLR
+wb_reset => count[3].ACLR
+go => ~NO_FANOUT~
+tip => count.OUTPUTSELECT
+tip => count.OUTPUTSELECT
+tip => count.OUTPUTSELECT
+tip => count.OUTPUTSELECT
+tip => cpol_0.OUTPUTSELECT
+tip => cpol_1.OUTPUTSELECT
+tip => sclk~reg0.ENA
+lstclk => always1.IN1
+divider[0] => Add1.IN8
+divider[0] => Equal2.IN3
+divider[1] => Add1.IN7
+divider[1] => Equal2.IN2
+divider[2] => Add1.IN6
+divider[2] => Equal2.IN1
+divider[3] => Add1.IN5
+divider[3] => Equal2.IN0
+sclk <= sclk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cpol_0 <= cpol_0~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cpol_1 <= cpol_1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

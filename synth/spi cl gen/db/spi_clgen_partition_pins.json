@@ -1,0 +1,53 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "sclk",
+					"strict" : false
+				},
+				{
+					"name" : "cpol_0",
+					"strict" : false
+				},
+				{
+					"name" : "cpol_1",
+					"strict" : false
+				},
+				{
+					"name" : "lstclk",
+					"strict" : false
+				},
+				{
+					"name" : "tip",
+					"strict" : false
+				},
+				{
+					"name" : "divider[0]",
+					"strict" : false
+				},
+				{
+					"name" : "divider[1]",
+					"strict" : false
+				},
+				{
+					"name" : "divider[2]",
+					"strict" : false
+				},
+				{
+					"name" : "divider[3]",
+					"strict" : false
+				},
+				{
+					"name" : "wb_clk",
+					"strict" : false
+				},
+				{
+					"name" : "wb_reset",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

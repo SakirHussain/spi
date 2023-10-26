@@ -1,0 +1,221 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "wb_dat_o[0]",
+					"strict" : false
+				},
+				{
+					"name" : "wb_dat_o[1]",
+					"strict" : false
+				},
+				{
+					"name" : "wb_dat_o[2]",
+					"strict" : false
+				},
+				{
+					"name" : "wb_dat_o[3]",
+					"strict" : false
+				},
+				{
+					"name" : "wb_dat_o[4]",
+					"strict" : false
+				},
+				{
+					"name" : "wb_dat_o[5]",
+					"strict" : false
+				},
+				{
+					"name" : "wb_dat_o[6]",
+					"strict" : false
+				},
+				{
+					"name" : "wb_dat_o[7]",
+					"strict" : false
+				},
+				{
+					"name" : "wb_dat_o[8]",
+					"strict" : false
+				},
+				{
+					"name" : "wb_dat_o[9]",
+					"strict" : false
+				},
+				{
+					"name" : "wb_dat_o[10]",
+					"strict" : false
+				},
+				{
+					"name" : "wb_dat_o[11]",
+					"strict" : false
+				},
+				{
+					"name" : "wb_dat_o[12]",
+					"strict" : false
+				},
+				{
+					"name" : "wb_dat_o[13]",
+					"strict" : false
+				},
+				{
+					"name" : "wb_ack_out",
+					"strict" : false
+				},
+				{
+					"name" : "wb_int_o",
+					"strict" : false
+				},
+				{
+					"name" : "ss_pad_o[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ss_pad_o[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ss_pad_o[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ss_pad_o[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ss_pad_o[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ss_pad_o[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ss_pad_o[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ss_pad_o[7]",
+					"strict" : false
+				},
+				{
+					"name" : "sclk_out",
+					"strict" : false
+				},
+				{
+					"name" : "mosi",
+					"strict" : false
+				},
+				{
+					"name" : "wb_adr_in[4]",
+					"strict" : false
+				},
+				{
+					"name" : "wb_adr_in[2]",
+					"strict" : false
+				},
+				{
+					"name" : "wb_adr_in[3]",
+					"strict" : false
+				},
+				{
+					"name" : "wb_clk_in",
+					"strict" : false
+				},
+				{
+					"name" : "wb_rst_in",
+					"strict" : false
+				},
+				{
+					"name" : "wb_adr_in[0]",
+					"strict" : false
+				},
+				{
+					"name" : "wb_adr_in[1]",
+					"strict" : false
+				},
+				{
+					"name" : "wb_stb_in",
+					"strict" : false
+				},
+				{
+					"name" : "wb_cyc_in",
+					"strict" : false
+				},
+				{
+					"name" : "wb_dat_in[0]",
+					"strict" : false
+				},
+				{
+					"name" : "wb_sel_in[0]",
+					"strict" : false
+				},
+				{
+					"name" : "wb_we_in",
+					"strict" : false
+				},
+				{
+					"name" : "wb_dat_in[13]",
+					"strict" : false
+				},
+				{
+					"name" : "wb_sel_in[1]",
+					"strict" : false
+				},
+				{
+					"name" : "wb_dat_in[1]",
+					"strict" : false
+				},
+				{
+					"name" : "wb_dat_in[2]",
+					"strict" : false
+				},
+				{
+					"name" : "wb_dat_in[3]",
+					"strict" : false
+				},
+				{
+					"name" : "wb_dat_in[4]",
+					"strict" : false
+				},
+				{
+					"name" : "wb_dat_in[5]",
+					"strict" : false
+				},
+				{
+					"name" : "wb_dat_in[6]",
+					"strict" : false
+				},
+				{
+					"name" : "wb_dat_in[7]",
+					"strict" : false
+				},
+				{
+					"name" : "miso",
+					"strict" : false
+				},
+				{
+					"name" : "wb_dat_in[8]",
+					"strict" : false
+				},
+				{
+					"name" : "wb_dat_in[9]",
+					"strict" : false
+				},
+				{
+					"name" : "wb_dat_in[10]",
+					"strict" : false
+				},
+				{
+					"name" : "wb_dat_in[11]",
+					"strict" : false
+				},
+				{
+					"name" : "wb_dat_in[12]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

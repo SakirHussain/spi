@@ -8,73 +8,50 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-dD:/college/Maven Silicon/Alarm Pilot Project/Project_templates/sim/alarm_clock_top
+dC:/intelFPGA/20.1
 vspi_clgen
-Z0 !s110 1697105794
+!s110 1698312146
 !i10b 1
-!s100 4<cR42Y@mKQEeW`5QcEf32
-Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I]=EgoA[G_50IkRE<N5fo<0
-Z2 VDg1SIo80bB@j0V0VzS_@n1
-Z3 dD:/college/Maven Silicon/SPI/sim/spi clock gen
-w1697105780
+!s100 DC?Ifgd>43TV4GK_7;C_R3
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I?OoW40GVdiGdOh[7gKe7F1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dD:/college/Maven Silicon/SPI/sim/spi clock gen
+w1698304338
 8D:/college/Maven Silicon/SPI/rtl/spi_clgen.v
 FD:/college/Maven Silicon/SPI/rtl/spi_clgen.v
-!i122 49
+!i122 0
 L0 3 83
-Z4 OV;L;2020.1;71
+Z3 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1697105794.000000
+!s108 1698312146.000000
 !s107 D:\college\Maven Silicon\SPI\rtl\spi_defines.v|D:/college/Maven Silicon/SPI/rtl/spi_clgen.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/college/Maven Silicon/SPI/rtl/spi_clgen.v|
 !i113 1
-Z6 o-work work
-Z7 tCvgOpt 0
+Z4 o-work work
+Z5 tCvgOpt 0
 vspi_clgen_tb
-R0
+!s110 1698312147
 !i10b 1
 !s100 f2aD@=AIWD8_8DGI09co00
-R1
+R0
 IPzIGPY`l;k2lOb5IdA`QD0
-R2
-R3
-w1696413361
-Z8 8D:/college/Maven Silicon/SPI/tb/spi_clgen_tb.v
-Z9 FD:/college/Maven Silicon/SPI/tb/spi_clgen_tb.v
-!i122 50
-L0 1 62
-R4
-r1
-!s85 0
-31
-R5
-Z10 !s107 D:/college/Maven Silicon/SPI/tb/spi_clgen_tb.v|
-Z11 !s90 -reportprogress|300|-work|work|-stats=none|D:/college/Maven Silicon/SPI/tb/spi_clgen_tb.v|
-!i113 1
-R6
-R7
-vtb_spi_clgen
-!s110 1696354969
-!i10b 1
-!s100 eMoPe6bzW]Hi2T4<8Sz^L3
 R1
-Ic8UjkT<9o=kELcNIk8?L`3
 R2
+w1696413361
+8D:/college/Maven Silicon/SPI/tb/spi_clgen_tb.v
+FD:/college/Maven Silicon/SPI/tb/spi_clgen_tb.v
+!i122 1
+L0 1 62
 R3
-w1696354709
-R8
-R9
-!i122 17
-L0 1 69
-R4
 r1
 !s85 0
 31
-!s108 1696354969.000000
-R10
-R11
+!s108 1698312147.000000
+!s107 D:/college/Maven Silicon/SPI/tb/spi_clgen_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/college/Maven Silicon/SPI/tb/spi_clgen_tb.v|
 !i113 1
-R6
-R7
+R4
+R5

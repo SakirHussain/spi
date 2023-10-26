@@ -31,8 +31,8 @@ module spi_shift(
 
     reg [`SPI_CHAR_LEN_BITS:0] char_count;
     reg [`SPI_MAX_CHAR - 1 :0] master_data;
-    reg [`SPI_CHAR_LEN_BITS - 1:0] tx_bit_pos;
-    reg [`SPI_CHAR_LEN_BITS - 1:0] rx_bit_pos;
+    wire [`SPI_CHAR_LEN_BITS - 1:0] tx_bit_pos;
+    wire [`SPI_CHAR_LEN_BITS - 1:0] rx_bit_pos;
     wire rx_clk;
     wire tx_clk;
 

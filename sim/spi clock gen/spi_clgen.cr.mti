@@ -1,11 +1,12 @@
-{D:/college/Maven Silicon/SPI/rtl/spi_clgen.v} {2 {vlog -work work -stats=none {D:/college/Maven Silicon/SPI/rtl/spi_clgen.v}
+{D:/college/Maven Silicon/SPI/rtl/spi_clgen.v} {1 {vlog -work work -stats=none {D:/college/Maven Silicon/SPI/rtl/spi_clgen.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-** Warning: ** while parsing file included at D:/college/Maven Silicon/SPI/rtl/spi_clgen.v(1)
-** at D:\college\Maven Silicon\SPI\rtl\spi_defines.v(88): (vlog-2263) Redefinition of macro: 'SPI_RX_0' (previously defined near D:\college\Maven Silicon\SPI\rtl\spi_defines.v(78), old value '5'b00000', new value '5'b11000') .
 -- Compiling module spi_clgen
 
 Top level modules:
 	spi_clgen
+
+} {} {}} {D:/college/Maven Silicon/SPI/rtl/spi_defines.v} {1 {vlog -work work -stats=none {D:/college/Maven Silicon/SPI/rtl/spi_defines.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 
 } {} {}} {D:/college/Maven Silicon/SPI/tb/spi_clgen_tb.v} {1 {vlog -work work -stats=none {D:/college/Maven Silicon/SPI/tb/spi_clgen_tb.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
